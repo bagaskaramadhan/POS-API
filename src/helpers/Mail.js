@@ -12,15 +12,15 @@ const sendMail =  {
             secure: false,
             requireTLS: true,
             auth: {
-              user: 'dogofrockstar@gmail.com',
-              pass: 'an4K@ra97'
+              user: EMAIL,
+              pass: PASSWORD
             }
           });
           
           var mailOptions = {
-            from: 'POS APP',
+            from: `'Foodcourt-Team' <${EMAIL}>`,
             to: email,
-            subject: 'Sending Email using Node.js',
+            subject: 'Email Activation',
             html: `Please activation of email ! <br>
             <a href="${env.HOSTURL}${token}"> Activation</a>
             `
