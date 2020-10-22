@@ -15,7 +15,7 @@ app.use(express.static('asset/img/'))
 app.use(express.static('src/views'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-const { port }  = require('./src/helpers/env')
+const { PORT }  = require('./src/helpers/env')
 app.use(cors())
 
 
@@ -30,6 +30,6 @@ app.use(cors())
 
 
 app.use('/',routerNavigation)
-app.listen( port , () => {
-    console.log(`app running on port ${port}`)
+app.listen( PORT , () => {
+    console.log(`app running on port ${PORT}`)
 })
