@@ -34,7 +34,12 @@ const produks = {
                 '${data.price}',
                 '${data.image}',
                 '${data.category_id}')`,(err,result)=>{
-                err ? reject(new Error(err)) : resolve(result)
+                    if (err) {
+                        reject(new Error(err))
+                    } else {
+                        resolve(result)
+                    }
+                // err ? reject(new Error(err)) : resolve(result)
             })
         })
     },
