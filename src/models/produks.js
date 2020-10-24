@@ -39,7 +39,6 @@ const produks = {
                     } else {
                         resolve(result)
                     }
-                // err ? reject(new Error(err)) : resolve(result)
             })
         })
     },
